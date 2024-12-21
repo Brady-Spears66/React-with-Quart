@@ -1,2 +1,2 @@
-Quart==0.19.6
+Quart==0.19.9
 pydantic==2.8.2

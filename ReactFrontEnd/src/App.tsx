@@ -6,8 +6,9 @@ import { useAppDispatch, useAppSelector } from './state/Hooks'
 import { connectToWebsocket } from './state/websocket/WebsocketActions'
 import ChatButton from './components/ChatButton'
 import { ThemeOptions } from '@mui/material/styles'
-import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
+import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import ThemeModeButton from './components/ThemeModeButton'
+import { width } from '@mui/system'
 
 // @ts-ignore
 let theme = createTheme({});
@@ -51,6 +52,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Container sx={{width: "100vw"}}>
       <ThemeModeButton/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -73,7 +75,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <ChatButton/>
-      
+      </Container>
     </ThemeProvider>
   )
 }
